@@ -1,5 +1,5 @@
-export interface Task {
-}
+
+export interface TaskProps {[index: string]: Task[]}
 
 export class Task
 {
