@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.4",
     "readline": "0.0.3"
   },
   "devDependencies": {

@@ -1,9 +1,7 @@
 
-export interface TaskProps {[index: string]: Task[]}
-
 export class Task
 {
-    constructor(private _id: string, private _description: string, private _done: boolean, private _deadline: Date | null) {}
+    constructor(private _id: number, private _description: string, private _done: boolean) {}
 
     get id() {
         return this._id;
@@ -17,16 +15,8 @@ export class Task
         return this._done;
     }
 
-    get deadline() {
-        return this._deadline;
-    }
-
     set done(val: boolean) {
         this._done = val;
-    }
-
-    set deadline(val : Date | null) {
-        this._deadline = val;
     }
 }
 
