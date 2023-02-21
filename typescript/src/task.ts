@@ -1,9 +1,21 @@
 
 export interface TaskProps {[index: string]: Task[]}
 
-export class Task
+export interface TaskModelProps{
+    id : string,
+    description: string,
+    done: boolean,
+    deadline: Date| null
+}
+
+export class Task implements TaskModelProps
 {
-    constructor(private _id: string, private _description: string, private _done: boolean, private _deadline: Date | null) {}
+    private _id: string;
+    private _description: string;
+    private _done: boolean;
+    private _deadline: Date | null;
+
+    constructor(_id: string, _description: string, _done: boolean, _deadline: Date | null) {}
 
     get id() {
         return this._id;
